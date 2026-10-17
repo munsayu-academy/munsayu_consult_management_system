@@ -1,0 +1,1616 @@
+import type { Metadata } from "next";
+import styles from "./page.module.css";
+import CopyButton from "../../components/CopyButton";
+
+export const metadata: Metadata = { title: "문해와 사유 상담 스크립트" };
+
+export default function Page() {
+  return (
+    <div className={styles.page}>
+      {"\n\n"}
+      <div className={styles["wrap"]}>
+        {"\n  "}
+        <header className={styles["top"]}>
+          {"\n    "}
+          <span className={styles["badge"]}>
+            {"실장 내부용 · 외부 공유 금지"}
+          </span>
+          {"\n    "}
+          <p className={styles["kicker"]}>
+            {"문해와 사유 초등관 · PROJECT COSMO"}
+          </p>
+          {"\n    "}
+          <h1>{"상담 스크립트"}</h1>
+          {"\n    "}
+          <p className={styles["lead"]}>
+            {
+              "전화 문의, COSMO 스펙트럼 결과 상담, 자주 나오는 질문, 후속 연락까지 실장이 그대로 따라 말할 수 있게 정리했습니다. 내용은 PROJECT COSMO 커리큘럼(10월 17일 기준)을 따릅니다. 노란 칸은 아직 정해지지 않아 확정 후 채울 부분입니다."
+            }
+          </p>
+          {"\n    "}
+          <ul className={styles["legend"]}>
+            {"\n      "}
+            <li>
+              <span className={styles["chip-say"]}></span>
+              {"실장이 하는 말"}
+            </li>
+            {"\n      "}
+            <li>
+              <span className={styles["chip-hear"]}></span>
+              {"학부모의 예상 반응"}
+            </li>
+            {"\n      "}
+            <li>
+              <span className={styles["chip-ph"]}></span>
+              {"확정 후 채울 부분"}
+            </li>
+            {"\n    "}
+          </ul>
+          {"\n  "}
+        </header>
+        {"\n"}
+      </div>
+      {"\n\n"}
+      <nav className={styles["stages"]} aria-label={"상담 단계"}>
+        {"\n  "}
+        <div className={styles["scroller"]}>
+          {"\n    "}
+          <ul>
+            {"\n      "}
+            <li>
+              <a href={"#principles"}>{"원칙"}</a>
+            </li>
+            {"\n      "}
+            <li>
+              <a href={"#facts"}>{"핵심 정보"}</a>
+            </li>
+            {"\n      "}
+            <li>
+              <a href={"#call"}>{"전화 문의"}</a>
+            </li>
+            {"\n      "}
+            <li>
+              <a href={"#visit"}>{"결과 상담"}</a>
+            </li>
+            {"\n      "}
+            <li>
+              <a href={"#qa"}>{"질문 응대"}</a>
+            </li>
+            {"\n      "}
+            <li>
+              <a href={"#followup"}>{"후속 연락"}</a>
+            </li>
+            {"\n      "}
+            <li>
+              <a href={"#record"}>{"상담 기록"}</a>
+            </li>
+            {"\n    "}
+          </ul>
+          {"\n  "}
+        </div>
+        {"\n"}
+      </nav>
+      {"\n\n"}
+      <div className={styles["wrap"]}>
+        {"\n"}
+        <main>
+          {"\n\n  "}
+          <section className={styles["stage"]} id={"principles"}>
+            {"\n    "}
+            <div className={styles["stage-head"]}>
+              {"\n      "}
+              <p className={styles["eyebrow"]}>{"시작 전에"}</p>
+              {"\n      "}
+              <h2>{"상담의 다섯 가지 원칙"}</h2>
+              {"\n    "}
+            </div>
+            {"\n    "}
+            <ul className={styles["principles"]}>
+              {"\n      "}
+              <li>
+                <strong>{"순서를 말한다"}</strong>
+                <span>
+                  {
+                    "어휘(CORE)가 먼저, 독서(FLARE)가 그 위에. 모든 설명은 이 순서로 합니다."
+                  }
+                </span>
+              </li>
+              {"\n      "}
+              <li>
+                <strong>{"듣는 시간이 더 길게"}</strong>
+                <span>
+                  {
+                    "설명보다 질문을 먼저 하고, 학부모가 쓴 표현을 그대로 메모합니다."
+                  }
+                </span>
+              </li>
+              {"\n      "}
+              <li>
+                <strong>{"전화의 목표는 진단 예약"}</strong>
+                <span>
+                  {"등록은 COSMO 스펙트럼 결과 상담에서 이야기합니다."}
+                </span>
+              </li>
+              {"\n      "}
+              <li>
+                <strong>{"끝날 때 다음 약속"}</strong>
+                <span>{"어떤 상담이든 다음 날짜를 정하고 마칩니다."}</span>
+              </li>
+              {"\n      "}
+              <li>
+                <strong>{"정해진 것만 말한다"}</strong>
+                <span>
+                  {"효과 보장, 즉석 할인, 미확정 사항은 말하지 않습니다."}
+                </span>
+              </li>
+              {"\n    "}
+            </ul>
+            {"\n  "}
+          </section>
+          {"\n\n  "}
+          <section className={styles["stage"]} id={"facts"}>
+            {"\n    "}
+            <div className={styles["stage-head"]}>
+              {"\n      "}
+              <p className={styles["eyebrow"]}>{"상담 전 한 번 훑기"}</p>
+              {"\n      "}
+              <h2>{"꼭 정확히 말할 정보"}</h2>
+              {"\n    "}
+            </div>
+            {"\n    "}
+            <div className={styles["facts"]}>
+              {"\n      "}
+              <dl>
+                {"\n        "}
+                <dt>{"대상"}</dt>
+                <dd>{"초등 5, 6학년"}</dd>
+                {"\n        "}
+                <dt>{"수업"}</dt>
+                <dd>
+                  {
+                    "1회 3시간, 50분씩 3교시 (1교시 어휘 CORE, 2교시 책 소개와 쓰기 FLARE, 3교시 토의와 토론 FLARE)"
+                  }
+                </dd>
+                {"\n        "}
+                <dt>{"정원"}</dt>
+                <dd>{"한 반 10~15명 내외"}</dd>
+                {"\n        "}
+                <dt>{"반"}</dt>
+                <dd>{"학년별로 나눈 뒤 독해반, 논리반"}</dd>
+                {"\n        "}
+                <dt>{"CORE"}</dt>
+                <dd>
+                  {
+                    "초등 교과서부터 수능까지에서 5,000개 추출, 1단계 필수 어휘 500개"
+                  }
+                </dd>
+                {"\n        "}
+                <dt>{"FLARE"}</dt>
+                <dd>
+                  {
+                    "자체 개발 독서 교재. 학기 중 2주에 1권 (방학 1주에 1권 예정)"
+                  }
+                </dd>
+                {"\n        "}
+                <dt>{"진단"}</dt>
+                <dd>{"COSMO 스펙트럼, 50분"}</dd>
+                {"\n        "}
+                <dt>{"첨삭"}</dt>
+                <dd>{"학생별 개별 첨삭"}</dd>
+                {"\n        "}
+                <dt>{"교습비"}</dt>
+                <dd>
+                  <span className={styles["ph"]}>{"교습비"}</span>
+                </dd>
+                {"\n        "}
+                <dt>{"시간표"}</dt>
+                <dd>
+                  <span className={styles["ph"]}>{"학년별 요일과 시간"}</span>
+                </dd>
+                {"\n      "}
+              </dl>
+              {"\n    "}
+            </div>
+            {"\n  "}
+          </section>
+          {"\n\n  "}
+          <section className={styles["stage"]} id={"call"}>
+            {"\n    "}
+            <div className={styles["stage-head"]}>
+              {"\n      "}
+              <p className={styles["eyebrow"]}>{"상담 1 · 전화 문의"}</p>
+              {"\n      "}
+              <h2>{"전화 문의 스크립트"}</h2>
+              {"\n      "}
+              <p className={styles["goal"]}>
+                {"목표: COSMO 스펙트럼 진단 예약 · 5~7분"}
+              </p>
+              {"\n    "}
+            </div>
+            {"\n    "}
+            <ol className={styles["steps"]}>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"인사와 문의 경로 확인"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {'"안녕하세요, 문해와 사유 초등관 상담실장 '}
+                    <span className={styles["ph"]}>{"이름"}</span>
+                    {'입니다. 어떤 점이 궁금하셔서 연락 주셨어요?"'}
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>{'"혹시 저희 학원은 어떻게 알게 되셨어요?"'}</p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["tip"]}>
+                  <span className={styles["who"]}>{"포인트"}</span>
+                  <p>
+                    {
+                      "문의 경로(지인 소개, 온라인, 지나가다 봄 등)는 반드시 기록합니다."
+                    }
+                  </p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"아이 상황 묻기"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>{'"아이가 지금 몇 학년이에요? 학교는 어디 다니나요?"'}</p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"책은 평소에 어떻게 읽는 편이에요? 읽고 나서 내용을 설명하거나 글로 쓰는 건 어떤가요?"'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {'"글을 읽을 때 모르는 낱말 때문에 막히는 경우가 있나요?"'}
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {'"지금 다니는 학원이나 전에 해본 독서 수업이 있으세요?"'}
+                  </p>
+                </div>
+                {"\n        "}
+                <div
+                  className={
+                    styles["line"] + " " + styles["tip"] + " " + styles["no"]
+                  }
+                >
+                  <span className={styles["who"]}>{"대상"}</span>
+                  <p>
+                    {
+                      "5, 6학년이 아니면 대상 학년을 정확히 안내하고, 학부모 연락처와 학년만 기록해 둡니다."
+                    }
+                  </p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"고민을 정리해서 되묻기"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"정리해 보면, 책은 읽는데 읽고 나서 내용을 정리하거나 글로 쓰는 걸 어려워한다는 말씀이시죠?"'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["hear"]}>
+                  <span className={styles["who"]}>{"학부모"}</span>
+                  <p>{'"네, 맞아요. 그게 제일 걱정이에요."'}</p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["tip"]}>
+                  <span className={styles["who"]}>{"포인트"}</span>
+                  <p>{'학부모가 "맞아요"라고 해야 다음 단계로 갑니다.'}</p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"프로그램 소개 (30초)"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"저희 PROJECT COSMO는 책만 읽히는 논술이 아니라, 교과서 핵심 어휘를 먼저 다지고 그 위에서 읽고 생각하고 쓰는 순서로 설계된 초등 5, 6학년 과정이에요."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {'"말씀하신 '}
+                    <span className={styles["ph"]}>{"학부모가 말한 고민"}</span>
+                    {
+                      '은 낱말 뜻을 정확히 모르는 데서 시작하는 경우가 많아서, 저희는 어휘부터 잡고 책으로 넓혀 가요."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["tip"]}>
+                  <span className={styles["who"]}>{"포인트"}</span>
+                  <p>
+                    {
+                      "전화에서는 CORE와 FLARE의 세부 구성까지 가지 않습니다. 순서 하나만 전합니다."
+                    }
+                  </p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"COSMO 스펙트럼 제안"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"아이에게 맞는 반을 안내하려면 직접 읽고 써 보는 게 가장 정확해서요. COSMO 스펙트럼이라는 50분짜리 진단을 받아 보시고, 결과지를 보면서 상담드리면 어떨까요?"'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["hear"]}>
+                  <span className={styles["who"]}>{"학부모"}</span>
+                  <p>{'"수업료랑 시간표 먼저 알 수 있을까요?"'}</p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"수업은 한 번에 3시간, 50분씩 3교시로 진행하고, 교습비는 '
+                    }
+                    <span className={styles["ph"]}>{"교습비"}</span>
+                    {"예요. "}
+                    <span className={styles["ph"]}>{"학년"}</span>
+                    {" 수업은 "}
+                    <span className={styles["ph"]}>{"요일과 시간"}</span>
+                    {
+                      '에 있어요. 반은 진단 결과를 보고 맞춰 드리는 게 아이에게 좋아서요."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div
+                  className={
+                    styles["line"] + " " + styles["tip"] + " " + styles["no"]
+                  }
+                >
+                  <span className={styles["who"]}>{"주의"}</span>
+                  <p>
+                    {
+                      '진단을 "레벨테스트 통과"처럼 말하지 않습니다. 반을 안내하기 위한 진단입니다.'
+                    }
+                  </p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"예약 확정"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {'"'}
+                    <span className={styles["ph"]}>{"날짜"}</span>{" "}
+                    <span className={styles["ph"]}>{"시간"}</span>
+                    {
+                      ' 어떠세요? 진단은 50분이고, 끝나고 결과 상담을 이어서 하니까 부모님도 같이 오시면 좋아요."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {'"예약 내용은 문자로 다시 보내 드릴게요. 감사합니다."'}
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["tip"]}>
+                  <span className={styles["who"]}>{"포인트"}</span>
+                  <p>
+                    {
+                      '전화를 끊기 전에 날짜를 확정합니다. "생각해 볼게요"라고 하면 질문 응대의 해당 항목을 봅니다.'
+                    }
+                  </p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n    "}
+            </ol>
+            {"\n  "}
+          </section>
+          {"\n\n  "}
+          <section className={styles["stage"]} id={"visit"}>
+            {"\n    "}
+            <div className={styles["stage-head"]}>
+              {"\n      "}
+              <p className={styles["eyebrow"]}>{"상담 2 · 방문"}</p>
+              {"\n      "}
+              <h2>{"COSMO 스펙트럼 결과 상담 스크립트"}</h2>
+              {"\n      "}
+              <p className={styles["goal"]}>
+                {"목표: 그 자리에서 등록, 또는 다음 연락일 확정 · 20~30분"}
+              </p>
+              {"\n    "}
+            </div>
+            {"\n    "}
+            <ol className={styles["steps"]}>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"맞이하고 고민 다시 확인"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {'"오시느라 고생 많으셨어요. 전화로 '}
+                    <span className={styles["ph"]}>{"학부모가 말한 고민"}</span>
+                    {' 말씀하셨는데, 그 외에 더 궁금하신 게 있으세요?"'}
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["tip"]}>
+                  <span className={styles["who"]}>{"포인트"}</span>
+                  <p>
+                    {"상담 전에 전화 기록과 결과지를 다시 읽고 들어갑니다."}
+                  </p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"결과 설명 1: 잘하는 부분부터"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"COSMO 스펙트럼은 독해력, 어휘력, 추론사고력, 비판적사고력, 논리적표현력, 논술구성능력 여섯 가지를 봐요. '
+                    }
+                    <span className={styles["ph"]}>{"아이 이름"}</span>
+                    {"는 "}
+                    <span className={styles["ph"]}>{"강점 영역"}</span>
+                    {'이 특히 좋았어요. 여기 이 답을 보시면 알 수 있어요."'}
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["tip"]}>
+                  <span className={styles["who"]}>{"포인트"}</span>
+                  <p>{"점수보다 아이가 실제로 쓴 답과 문장을 보여 줍니다."}</p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"결과 설명 2: 어휘에서 보완할 점"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {'"다만 어휘 쪽에서는 '}
+                    <span className={styles["ph"]}>{"보완점"}</span>
+                    {
+                      '이 보여요. 글을 못 읽는 게 아니라, 모르는 낱말 하나 때문에 문장 전체를 놓치는 경우가 많거든요. 그래서 저희는 어휘부터 잡습니다."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["tip"]}>
+                  <span className={styles["who"]}>{"포인트"}</span>
+                  <p>
+                    {
+                      "결과지의 중심은 어휘입니다. 독서 영역은 그다음에 보완으로 설명합니다."
+                    }
+                  </p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"프로그램 설명: CORE"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"1교시에 쓰는 어휘 교재 COSMO CORE예요. 2015 개정 초등 교과서 6개 학년, 중학교 교과서, 고등학교 3월, 6월, 9월 모의고사, 수능에서 어휘 5,000개를 뽑았고, 그중 1단계에서 필수 어휘 500개를 다뤄요. 초등 교육과정 안에서 다시 검토해서 초등학생이 소화할 수 있게 정리했어요."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"뜻만 외우는 게 아니라, 특권과 특혜처럼 헷갈리는 낱말을 나란히 놓고 구별해요. 낱말마다 교과서 어느 과목에서 쓰이는지도 표시되어 있어요."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["tip"]}>
+                  <span className={styles["who"]}>{"포인트"}</span>
+                  <p>
+                    {
+                      "샘플 펼침면을 펼쳐 놓고 설명합니다. 상담에서 가장 먼저, 가장 길게 강조할 교재입니다."
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div
+                  className={
+                    styles["line"] + " " + styles["tip"] + " " + styles["no"]
+                  }
+                >
+                  <span className={styles["who"]}>{"주의"}</span>
+                  <p>
+                    {
+                      '"수능 대비 교재", "학교 시험 대비"라고 말하지 않습니다. 교과서에서 실제로 쓰이는 필수 어휘를 초등 수준에서 익히는 교재입니다.'
+                    }
+                  </p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"프로그램 설명: FLARE"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"2, 3교시에 쓰는 독서 교재 COSMO FLARE는 저희가 직접 개발했어요. 책 한 권을 2주 동안 다뤄요. 첫 주는 내용과 장면, 개념을 깊이 읽고, 둘째 주는 쓰기와 토의, 토론을 해요."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"문학 작품을 읽을 때는 비문학 자료를, 비문학 책을 읽을 때는 문학 작품을 같이 읽어서 생각의 폭을 넓혀요."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      "\"토의는 '황금 밸런스 찾기'라고, 선택의 좋은 점과 대가를 같이 따지면서 모둠이 합의하는 균형점을 찾아요. 토론은 입장을 무작위로 뽑아서, 내 생각과 다른 쪽의 논리도 세워 봐요. 마지막에는 책 속 장면을 근거로 자기 기준을 글로 씁니다.\""
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["tip"]}>
+                  <span className={styles["who"]}>{"포인트"}</span>
+                  <p>
+                    {
+                      "한 반 10~15명 내외라 개인 발표, 모둠 활동, 전체 활동이 한 수업 안에서 오가고, 쓴 글은 학생마다 개별 첨삭한다는 점을 함께 말합니다."
+                    }
+                  </p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"반 안내"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"반은 학년별로 나누고, 그 안에서 독해반과 논리반이 있어요. 두 반은 같은 교재로 배우고, 수업에서 집중하는 지점이 달라요."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '(독해반 안내) "지금은 글의 내용과 구조를 정확히 잡는 힘을 먼저 키우면, 생각을 펼치는 활동도 훨씬 단단해져요. 그래서 '
+                    }
+                    <span className={styles["ph"]}>{"아이 이름"}</span>
+                    {'는 독해반을 권해 드려요."'}
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '(논리반 안내) "읽은 내용을 바탕으로 자기 생각을 말하고 쓰는 단계로 갈 준비가 되어 있어서, 생각을 나누고 의견을 세우는 데 집중하는 논리반을 권해 드려요."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {'"'}
+                    <span className={styles["ph"]}>{"학년"}</span>{" "}
+                    <span className={styles["ph"]}>{"반 이름"}</span>
+                    {"은 "}
+                    <span className={styles["ph"]}>{"요일과 시간"}</span>
+                    {"이고, 지금 "}
+                    <span className={styles["ph"]}>{"남은 자리"}</span>
+                    {'자리가 남아 있어요."'}
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["internal-band"]}>
+                  {"\n          "}
+                  <span className={styles["k"]}>
+                    {"실장 전용 · 외부 안내 금지"}
+                  </span>
+                  {"\n          "}
+                  <ul>
+                    {"\n            "}
+                    <li>
+                      {
+                        "내부적으로 독해반은 기본, 논리반은 심화에 해당합니다. 이 구분은 말하지 않습니다."
+                      }
+                    </li>
+                    {"\n            "}
+                    <li>
+                      {
+                        '"기본반", "심화반", "윗반", "아랫반", "레벨이 낮은 반"은 쓰지 않습니다.'
+                      }
+                    </li>
+                    {"\n            "}
+                    <li>
+                      {
+                        '"합격", "불합격", "등수", 다른 학생과 비교하는 말도 쓰지 않습니다.'
+                      }
+                    </li>
+                    {"\n            "}
+                    <li>
+                      {
+                        "남은 자리는 실제 숫자로만 말하고, 마감을 부풀리지 않습니다."
+                      }
+                    </li>
+                    {"\n          "}
+                  </ul>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"교습비와 규정 안내"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {'"교습비는 '}
+                    <span className={styles["ph"]}>{"교습비"}</span>
+                    {"이고, 결제는 "}
+                    <span className={styles["ph"]}>{"결제 방식"}</span>
+                    {
+                      '으로 하시면 돼요. 환불 규정은 이 안내문에 정리되어 있어요."'
+                    }
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["tip"]}>
+                  <span className={styles["who"]}>{"포인트"}</span>
+                  <p>
+                    {
+                      "운영 정책 1장(교습비, 환불, 할인, 출결과 보강)을 보여 주며 설명합니다."
+                    }
+                  </p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n      "}
+              <li>
+                {"\n        "}
+                <h3>{"등록 권유와 마무리"}</h3>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {'"'}
+                    <span className={styles["ph"]}>{"반 이름"}</span>
+                    {"으로 등록 도와드릴까요? 첫 수업은 "}
+                    <span className={styles["ph"]}>{"개강일"}</span>
+                    {'이에요."'}
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["hear"]}>
+                  <span className={styles["who"]}>{"학부모"}</span>
+                  <p>{'"조금 더 생각해 볼게요."'}</p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["say"]}>
+                  <span className={styles["who"]}>{"실장"}</span>
+                  <p>
+                    {
+                      '"그럼요. 혹시 시간, 비용, 아이 의사 중에 어떤 부분이 가장 고민되세요? 그리고 '
+                    }
+                    <span className={styles["ph"]}>{"날짜"}</span>
+                    {'쯤 다시 연락드려도 될까요?"'}
+                  </p>
+                </div>
+                {"\n        "}
+                <div className={styles["line"] + " " + styles["tip"]}>
+                  <span className={styles["who"]}>{"포인트"}</span>
+                  <p>
+                    {
+                      "등록을 재촉하지 않습니다. 고민 이유와 다음 연락일은 꼭 받아 둡니다."
+                    }
+                  </p>
+                </div>
+                {"\n      "}
+              </li>
+              {"\n    "}
+            </ol>
+            {"\n  "}
+          </section>
+          {"\n\n  "}
+          <section className={styles["stage"]} id={"qa"}>
+            {"\n    "}
+            <div className={styles["stage-head"]}>
+              {"\n      "}
+              <p className={styles["eyebrow"]}>{"상담 중 자주 나오는 말"}</p>
+              {"\n      "}
+              <h2>{"질문 응대"}</h2>
+              {"\n      "}
+              <p className={styles["goal"]}>
+                {"답은 이 범위 안에서 실장 말투로 풀어 말합니다"}
+              </p>
+              {"\n    "}
+            </div>
+            {"\n\n    "}
+            <h3 className={styles["group"]}>{"프로그램 전체"}</h3>
+            {"\n    "}
+            <div className={styles["objections"]}>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"다른 독서 논술이랑 뭐가 달라요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"초등부터 수능까지 이어지는 필수 어휘집이 따로 있다는 게 가장 큰 차이예요. 독서는 직접 개발한 교재로 문학과 비문학을 엮어 읽고, 토의와 토론, 쓰기까지 한 권을 깊게 다뤄요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div
+                    className={
+                      styles["line"] + " " + styles["tip"] + " " + styles["no"]
+                    }
+                  >
+                    <span className={styles["who"]}>{"주의"}</span>
+                    <p>
+                      {
+                        '다른 학원 이름을 꺼내거나 비방하지 않습니다. "일반적인 방식과 이렇게 다릅니다"로만 설명합니다.'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"한 반에 몇 명이에요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"10~15명 내외예요. 개인 발표, 모둠 활동, 전체 활동이 한 수업 안에서 고루 이루어지는 규모예요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"효과는 언제쯤 보여요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"쓴 글은 학생마다 개별 첨삭해서 돌려 드려요. 처음 쓴 글과 비교하시면서 변화를 직접 확인하실 수 있어요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div
+                    className={
+                      styles["line"] + " " + styles["tip"] + " " + styles["no"]
+                    }
+                  >
+                    <span className={styles["who"]}>{"주의"}</span>
+                    <p>
+                      {
+                        '"점수가 오른다", "몇 달이면 좋아진다"는 말은 하지 않습니다. 결과를 보내는 주기는 확정 전입니다.'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"중학교 공부랑은 어떻게 이어져요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"CORE에서 중학교 교과서 어휘까지 미리 만나고, 개념을 익히고 토의, 토론, 쓰기를 해 본 경험이 이후 공부의 바탕이 돼요. 다음 단계 과정은 지금 개발 중이에요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div
+                    className={
+                      styles["line"] + " " + styles["tip"] + " " + styles["no"]
+                    }
+                  >
+                    <span className={styles["who"]}>{"주의"}</span>
+                    <p>
+                      {
+                        "지금 운영하는 것은 1단계(정확히 읽기)입니다. 2단계와 3단계를 운영 중처럼 말하지 않습니다."
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"교재를 미리 볼 수 있어요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"네, 여기 CORE 단원과 FLARE 교재 샘플 펼침면이 있어요. 같이 보시면서 설명드릴게요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n    "}
+            </div>
+            {"\n\n    "}
+            <h3 className={styles["group"]}>{"어휘 (CORE)"}</h3>
+            {"\n    "}
+            <div className={styles["objections"]}>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"어휘는 어디서 뽑은 거예요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"2015 개정 초등 교과서 6개 학년, 중학교 국어, 수학, 과학, 사회, 실과 교과서, 고등학교 3월, 6월, 9월 모의고사, 수능에서 필수 어휘를 뽑아 집필진이 정리했어요. 초등 교육과정 안에서 다시 검토했고요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["tip"]}>
+                    <span className={styles["who"]}>{"포인트"}</span>
+                    <p>
+                      {
+                        "어휘 출처 표기는 자료마다 조금 달라 확정 전입니다. 확정되기 전까지 이 문장을 그대로 씁니다. 집필진 학력은 말하지 않습니다."
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"초등학생이 수능 어휘를 배워도 돼요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"수능 대비가 아니라, 앞으로 계속 만날 필수 어휘를 초등학생이 이해할 수 있는 수준으로 정리한 거예요. 1단계에서는 그중 500개를 다뤄요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"학교 공부에 도움이 돼요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"CORE 어휘는 교과서에서 실제로 쓰이는 낱말이고, 교재에 어느 과목에서 쓰이는지 표시되어 있어서 학교 공부를 할 때 다시 만나게 돼요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div
+                    className={
+                      styles["line"] + " " + styles["tip"] + " " + styles["no"]
+                    }
+                  >
+                    <span className={styles["who"]}>{"주의"}</span>
+                    <p>{"성적 향상을 약속하지 않습니다."}</p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n    "}
+            </div>
+            {"\n\n    "}
+            <h3 className={styles["group"]}>{"독서 (FLARE)"}</h3>
+            {"\n    "}
+            <div className={styles["objections"]}>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"어떤 책을 읽어요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"분야별로 엄선한 도서를 2주에 한 권씩 다뤄요. 목록은 확정되는 대로 안내드릴게요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div
+                    className={
+                      styles["line"] + " " + styles["tip"] + " " + styles["no"]
+                    }
+                  >
+                    <span className={styles["who"]}>{"주의"}</span>
+                    <p>
+                      {
+                        "도서 목록은 공개 범위가 정해지기 전까지 말하지 않습니다."
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"문학만 읽어요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"문학 작품을 읽을 때는 비문학 자료를, 비문학 책을 읽을 때는 문학 작품을 같이 읽어요. 예를 들어 문학 작품 속 감정과 기억을 다룰 때 관련된 뇌과학 이론을 함께 읽는 식이에요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["tip"]}>
+                    <span className={styles["who"]}>{"포인트"}</span>
+                    <p>
+                      {
+                        '현재 교재는 문학 작품이 중심입니다. 과학기술, 정보IT 같은 분야의 도서는 "앞으로 넓혀 갈 계획"으로만 말합니다.'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"책이 초등학생한테 어렵지 않아요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"책 전체를 혼자 소화하게 하지 않아요. 중요한 장면을 함께 발췌해서 읽고, 책에 담긴 개념은 쉬운 말로 풀어서 수업해요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"책을 안 읽어 오면 어떡해요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"교재 안에 책 속 장면과 읽기 자료가 있어서 수업에는 참여할 수 있어요. 그래도 책을 읽어 오면 훨씬 깊게 참여할 수 있어서 읽어 오도록 지도해요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"토의, 토론은 어떻게 해요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        "\"토의는 '황금 밸런스 찾기'로, 선택의 좋은 점과 대가를 같이 따지고 조건이 바뀌면 다시 선택하면서 모둠이 합의하는 균형점을 찾아요. 토론은 입장을 무작위로 뽑아서 입론, 교차 질문, 상대 주장 점검, 최후 발언 순서로 진행해요.\""
+                      }
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"진행은 선생님이 하고, 순서가 정해져 있어서 말 잘하는 아이만 주도하지 않아요. 충분히 고민하고, 쓰고, 첨삭받고, 의견을 나누는 시간을 가져요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"첨삭은 어떻게 해요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"학생마다 개별 첨삭해요. 맞춤법을 고치는 데서 그치지 않고, 글을 더 잘 쓰도록 방향을 잡아 줘요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["tip"]}>
+                    <span className={styles["who"]}>{"포인트"}</span>
+                    <p>
+                      {
+                        '쓰기 시간 배분과 학부모에게 결과를 보내는 주기는 확정 전입니다. "확정되는 대로 안내드리겠습니다"로 답합니다.'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n    "}
+            </div>
+            {"\n\n    "}
+            <h3 className={styles["group"]}>{"반과 진단"}</h3>
+            {"\n    "}
+            <div className={styles["objections"]}>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"독해반이랑 논리반은 어떻게 달라요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"같은 교재로 배우고, 독해반은 책의 내용과 글의 구조에, 논리반은 생각을 나누고 의견을 세우는 데 집중해요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"어느 반이 더 높은 반이에요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"두 반은 같은 교재로 배우고, 수업에서 집중하는 지점이 달라요. 지금 아이에게 맞는 집중점을 기준으로 안내드려요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div
+                    className={
+                      styles["line"] + " " + styles["tip"] + " " + styles["no"]
+                    }
+                  >
+                    <span className={styles["who"]}>{"주의"}</span>
+                    <p>{"기본, 심화, 위, 아래로 설명하지 않습니다."}</p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"레벨테스트로 반이 정해지는 거예요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"COSMO 스펙트럼 결과를 근거로 맞는 반을 안내드려요. 합격, 불합격이 있는 시험이 아니라 반을 정하기 위한 진단이에요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"중간에 반을 옮길 수 있어요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>{'"반 이동 기준은 확정되는 대로 안내드릴게요."'}</p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n    "}
+            </div>
+            {"\n\n    "}
+            <h3 className={styles["group"]}>{"결정을 망설일 때"}</h3>
+            {"\n    "}
+            <div className={styles["objections"]}>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"생각해 보고 연락드릴게요"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"그럼요. 혹시 시간, 비용, 아이 의사 중에 어떤 부분이 가장 고민되세요? '
+                      }
+                      <span className={styles["ph"]}>{"날짜"}</span>
+                      {'에 한 번 더 연락드려도 될까요?"'}
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["tip"]}>
+                    <span className={styles["who"]}>{"포인트"}</span>
+                    <p>{"대답한 고민을 미등록 사유로 기록합니다."}</p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"다른 학원도 알아보고 있어요"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"잘하셨어요. 비교하실 때 어휘를 따로 체계적으로 다루는지, 독서 교재가 직접 만든 것인지, 한 반 인원과 첨삭 방식은 어떤지 같이 보시면 좋아요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"비용이 좀 부담돼요"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {'"'}
+                      <span className={styles["ph"]}>
+                        {"형제 할인, 사전 등록 혜택"}
+                      </span>
+                      {'이 있어서 해당되시는지 같이 볼게요."'}
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div
+                    className={
+                      styles["line"] + " " + styles["tip"] + " " + styles["no"]
+                    }
+                  >
+                    <span className={styles["who"]}>{"주의"}</span>
+                    <p>
+                      {"정해진 정책 밖의 할인은 즉석에서 약속하지 않습니다."}
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"아이가 하기 싫어해요"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {
+                        '"처음에는 그런 아이들이 많아요. 저희 수업은 혼자 앉아서 쓰는 시간만 있는 게 아니라 모둠 활동이나 토의, 토론처럼 친구들과 주고받는 시간이 많아요."'
+                      }
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["tip"]}>
+                    <span className={styles["who"]}>{"포인트"}</span>
+                    <p>
+                      <span className={styles["ph"]}>
+                        {"체험수업 운영 여부"}
+                      </span>
+                      {"가 정해지면 체험 안내를 덧붙입니다."}
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n      "}
+              <details className={styles["obj"]}>
+                {"\n        "}
+                <summary>{'"숙제는 얼마나 돼요?"'}</summary>
+                {"\n        "}
+                <div className={styles["body"]}>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["say"]}>
+                    <span className={styles["who"]}>{"실장"}</span>
+                    <p>
+                      {'"'}
+                      <span className={styles["ph"]}>{"숙제 종류와 분량"}</span>
+                      {' 정도예요."'}
+                    </p>
+                  </div>
+                  {"\n          "}
+                  <div className={styles["line"] + " " + styles["tip"]}>
+                    <span className={styles["who"]}>{"포인트"}</span>
+                    <p>
+                      {
+                        '확정 전에는 "확정되는 대로 안내드리겠습니다"로 답합니다.'
+                      }
+                    </p>
+                  </div>
+                  {"\n        "}
+                </div>
+                {"\n      "}
+              </details>
+              {"\n    "}
+            </div>
+            {"\n  "}
+          </section>
+          {"\n\n  "}
+          <section className={styles["stage"]} id={"followup"}>
+            {"\n    "}
+            <div className={styles["stage-head"]}>
+              {"\n      "}
+              <p className={styles["eyebrow"]}>{"상담 3 · 예약과 미등록자"}</p>
+              {"\n      "}
+              <h2>{"후속 연락 예시"}</h2>
+              {"\n      "}
+              <p className={styles["goal"]}>
+                {"안내 메시지 수신에 동의한 학부모에게만 보냅니다"}
+              </p>
+              {"\n    "}
+            </div>
+            {"\n    "}
+            <div className={styles["msgs"]}>
+              {"\n      "}
+              <article className={styles["msg"]}>
+                {"\n        "}
+                <div className={styles["msg-head"]}>
+                  <h3>{"진단 예약 확인 문자"}</h3>
+                  <span className={styles["when"]}>{"전화 상담 직후"}</span>
+                  <CopyButton className={styles.copy} />
+                </div>
+                {"\n        "}
+                <p className={styles["msg-text"]}>
+                  {
+                    "안녕하세요, 문해와 사유 초등관입니다.\n[아이 이름] 학생의 COSMO 스펙트럼 진단 예약 안내드립니다.\n\n일시: [날짜] [시간]\n장소: [주소]\n소요 시간: 진단 50분, 이어서 결과 상담\n\n결과 상담에는 부모님도 함께 오시면 좋습니다. 일정 변경은 이 번호로 연락 주세요."
+                  }
+                </p>
+                {"\n      "}
+              </article>
+              {"\n      "}
+              <article className={styles["msg"]}>
+                {"\n        "}
+                <div className={styles["msg-head"]}>
+                  <h3>{"상담 후 2일 문자"}</h3>
+                  <span className={styles["when"]}>{"결과 상담 2일 뒤"}</span>
+                  <CopyButton className={styles.copy} />
+                </div>
+                {"\n        "}
+                <p className={styles["msg-text"]}>
+                  {
+                    "안녕하세요, 문해와 사유 초등관 [실장 이름]입니다.\n[날짜]에 COSMO 스펙트럼 결과 상담을 받으신 [아이 이름] 부모님께 연락드립니다.\n\n상담 때 말씀하신 [고민] 관련해서 더 궁금하신 점이 있으면 편하게 연락 주세요. [반 이름]은 현재 [남은 자리]자리 남아 있습니다."
+                  }
+                </p>
+                {"\n      "}
+              </article>
+              {"\n      "}
+              <article className={styles["msg"]}>
+                {"\n        "}
+                <div className={styles["msg-head"]}>
+                  <h3>{"상담 후 7일 전화"}</h3>
+                  <span className={styles["when"]}>{"결과 상담 7일 뒤"}</span>
+                  <CopyButton className={styles.copy} />
+                </div>
+                {"\n        "}
+                <p className={styles["msg-text"]}>
+                  {
+                    '"안녕하세요, 문해와 사유 초등관 [실장 이름]입니다. 지난번 결과 상담 이후 고민해 보셨는지 여쭤보려고 연락드렸어요. 혹시 결정하시는 데 걸리는 부분이 있으세요?"'
+                  }
+                </p>
+                {"\n      "}
+              </article>
+              {"\n      "}
+              <article className={styles["msg"]}>
+                {"\n        "}
+                <div className={styles["msg-head"]}>
+                  <h3>{"다음 모집 안내"}</h3>
+                  <span className={styles["when"]}>
+                    {"설명회, 방학 과정 모집 시"}
+                  </span>
+                  <CopyButton className={styles.copy} />
+                </div>
+                {"\n        "}
+                <p className={styles["msg-text"]}>
+                  {
+                    "안녕하세요, 문해와 사유 초등관입니다.\n지난번 상담해 주셔서 감사했습니다. [설명회/방학 과정] 소식이 있어 안내드립니다.\n\n[일정과 내용]\n\n관심 있으시면 이 번호로 답장 주세요."
+                  }
+                </p>
+                {"\n      "}
+              </article>
+              {"\n    "}
+            </div>
+            {"\n  "}
+          </section>
+          {"\n\n  "}
+          <section className={styles["stage"]} id={"record"}>
+            {"\n    "}
+            <div className={styles["stage-head"]}>
+              {"\n      "}
+              <p className={styles["eyebrow"]}>{"상담이 끝나면"}</p>
+              {"\n      "}
+              <h2>{"상담 기록 항목"}</h2>
+              {"\n      "}
+              <p className={styles["goal"]}>
+                {"상담 직후 5분 안에 기록합니다"}
+              </p>
+              {"\n    "}
+            </div>
+            {"\n    "}
+            <div className={styles["record"]}>
+              {"\n      "}
+              <ul>
+                {"\n        "}
+                <li>
+                  <div>
+                    <b>{"문의 경로"}</b>{" "}
+                    <span>{"지인 소개, 온라인, 현장 방문 등"}</span>
+                  </div>
+                </li>
+                {"\n        "}
+                <li>
+                  <div>
+                    <b>{"학년, 학교"}</b>
+                  </div>
+                </li>
+                {"\n        "}
+                <li>
+                  <div>
+                    <b>{"학부모 고민"}</b>{" "}
+                    <span>{"학부모가 쓴 표현 그대로"}</span>
+                  </div>
+                </li>
+                {"\n        "}
+                <li>
+                  <div>
+                    <b>{"독서, 글쓰기, 어휘 현황"}</b>{" "}
+                    <span>
+                      {"읽는 습관, 글쓰기 반응, 낱말 때문에 막히는지"}
+                    </span>
+                  </div>
+                </li>
+                {"\n        "}
+                <li>
+                  <div>
+                    <b>{"현재 다니는 학원"}</b>{" "}
+                    <span>{"시간표 조정에 필요"}</span>
+                  </div>
+                </li>
+                {"\n        "}
+                <li>
+                  <div>
+                    <b>{"COSMO 스펙트럼 결과"}</b>{" "}
+                    <span>{"강점 영역, 어휘 보완점"}</span>
+                  </div>
+                </li>
+                {"\n        "}
+                <li>
+                  <div>
+                    <b>{"안내한 반"}</b>{" "}
+                    <span>{"학년, 독해반 또는 논리반"}</span>
+                  </div>
+                </li>
+                {"\n        "}
+                <li>
+                  <div>
+                    <b>{"상담 결과"}</b> <span>{"등록 / 보류 / 미등록"}</span>
+                  </div>
+                </li>
+                {"\n        "}
+                <li>
+                  <div>
+                    <b>{"미등록 사유"}</b>{" "}
+                    <span>
+                      {"가격, 시간, 거리, 수업 방식, 비교 중, 아이 의사"}
+                    </span>
+                  </div>
+                </li>
+                {"\n        "}
+                <li>
+                  <div>
+                    <b>{"다음 연락일"}</b>
+                  </div>
+                </li>
+                {"\n        "}
+                <li>
+                  <div>
+                    <b>{"강사 인수인계"}</b>{" "}
+                    <span>{"아이 성향, 독서 습관, 학부모 기대"}</span>
+                  </div>
+                </li>
+                {"\n      "}
+              </ul>
+              {"\n    "}
+            </div>
+            {"\n  "}
+          </section>
+          {"\n\n"}
+        </main>
+        {"\n"}
+        <footer className={styles["foot"]}>
+          {
+            "PROJECT COSMO 커리큘럼(10월 17일 기준)을 바탕으로 썼습니다. 노란 칸은 교습비, 시간표, 개강일, 할인 정책, 체험수업, 숙제 분량이 정해진 뒤 채우고, 원장, 강사와 상담 리허설을 거쳐 확정합니다."
+          }
+        </footer>
+        {"\n"}
+      </div>
+      {"\n\n"}
+    </div>
+  );
+}
