@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
+import DocumentLink from "../../components/DocumentLink";
 
 export const metadata: Metadata = { title: "PROJECT COSMO 커리큘럼" };
 
@@ -27,6 +28,7 @@ export default function Page() {
             <span className={styles["en"]}>{"PROJECT COSMO"}</span>
             {" 커리큘럼"}
           </h1>
+          <DocumentLink href="/">상담 스크립트로 돌아가기</DocumentLink>
           {"\n    "}
           <p className={styles["lead"]}>
             {

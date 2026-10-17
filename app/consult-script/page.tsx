@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import styles from "./page.module.css";
 import CopyButton from "../../components/CopyButton";
+import DocumentLink from "../../components/DocumentLink";
 
 export const metadata: Metadata = { title: "문해와 사유 상담 스크립트" };
 
@@ -21,6 +22,7 @@ export default function Page() {
           </p>
           {"\n    "}
           <h1>{"상담 스크립트"}</h1>
+          <DocumentLink href="/curriculum">COSMO 커리큘럼 보기</DocumentLink>
           {"\n    "}
           <p className={styles["lead"]}>
             {

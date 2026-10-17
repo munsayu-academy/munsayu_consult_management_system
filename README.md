@@ -2,9 +2,11 @@
 
 Next.js App Router / TypeScript로 옮긴 정적 문서입니다.
 
-- `/`: 두 문서 링크
+- `/`: 상담 스크립트 기본 화면. 상단의 `COSMO 커리큘럼 보기` 버튼으로 `/curriculum`으로 이동합니다.
 - `/curriculum`: PROJECT COSMO 커리큘럼
 - `/consult-script`: 상담 스크립트
+
+커리큘럼 상단의 `상담 스크립트로 돌아가기` 버튼은 `/`으로 이동합니다. 문서 전환 링크도 서버 컴포넌트입니다.
 
 모든 페이지에 `robots: noindex, nofollow`를 적용합니다. 복사 버튼만 클라이언트 컴포넌트이며, 본문은 서버 컴포넌트입니다.
 
