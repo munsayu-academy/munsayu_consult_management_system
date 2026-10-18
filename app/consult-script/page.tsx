@@ -197,8 +197,8 @@ export default function Page() {
                 <dt>{"진단"}</dt>
                 <dd>{"COSMO 스펙트럼, 50분"}</dd>
                 {"\n        "}
-                <dt>{"첨삭"}</dt>
-                <dd>{"학생별 개별 첨삭"}</dd>
+                <dt>{"학부모 리포트"}</dt>
+                <dd>{"학습 과정과 변화를 학부모 리포트로 안내"}</dd>
                 {"\n        "}
                 <dt>{"수강료"}</dt>
                 <dd>{"4회 수업 기준 270,000원 (교재비 별도)"}</dd>
@@ -624,7 +624,7 @@ export default function Page() {
                   <span className={styles["who"]}>{"포인트"}</span>
                   <p>
                     {
-                      "정원은 10명 이내이며, 개인 발표, 모둠 활동, 전체 활동이 한 수업 안에서 오가고 쓴 글은 학생마다 개별 첨삭한다는 점을 함께 말합니다."
+                      "정원은 10명 이내이며, 개인 발표, 모둠 활동, 전체 활동이 한 수업 안에서 오갑니다. 학습 과정과 변화는 학부모 리포트로 안내합니다."
                     }
                   </p>
                 </div>
@@ -863,7 +863,7 @@ export default function Page() {
                     <span className={styles["who"]}>{"실장"}</span>
                     <p>
                       {
-                        '"쓴 글은 학생마다 개별 첨삭해서 돌려 드려요. 처음 쓴 글과 비교하시면서 변화를 직접 확인하실 수 있어요."'
+                        '"수업에서의 학습 과정과 변화를 학부모 리포트로 전해드려요. 리포트를 통해 아이가 수업에서 어떻게 참여하고 있는지 확인하실 수 있어요."'
                       }
                     </p>
                   </div>
@@ -1151,7 +1151,7 @@ export default function Page() {
               {"\n      "}
               <details className={styles["obj"]}>
                 {"\n        "}
-                <summary>{'"첨삭은 어떻게 해요?"'}</summary>
+                <summary>{'"학부모 리포트는 어떻게 받나요?"'}</summary>
                 {"\n        "}
                 <div className={styles["body"]}>
                   {"\n          "}
@@ -1159,7 +1159,7 @@ export default function Page() {
                     <span className={styles["who"]}>{"실장"}</span>
                     <p>
                       {
-                        '"학생마다 개별 첨삭해요. 맞춤법을 고치는 데서 그치지 않고, 글을 더 잘 쓰도록 방향을 잡아 줘요."'
+                        '"수업에서의 학습 과정과 변화를 학부모 리포트로 전해드려요. 리포트 제공 주기는 확정되는 대로 안내드리겠습니다."'
                       }
                     </p>
                   </div>
@@ -1168,7 +1168,7 @@ export default function Page() {
                     <span className={styles["who"]}>{"포인트"}</span>
                     <p>
                       {
-                        '쓰기 시간 배분과 학부모에게 결과를 보내는 주기는 확정 전입니다. "확정되는 대로 안내드리겠습니다"로 답합니다.'
+                        '쓰기 시간 배분과 학부모 리포트 제공 주기는 확정 전입니다. "확정되는 대로 안내드리겠습니다"로 답합니다.'
                       }
                     </p>
                   </div>

@@ -167,9 +167,9 @@ export default function Page() {
               </div>
               {"\n      "}
               <div className={styles["fact"]}>
-                <span className={styles["k"]}>{"첨삭"}</span>
-                <span className={styles["v"]}>{"학생별 개별 첨삭"}</span>
-                <span className={styles["s"]}>{"맞춤법보다 글의 방향"}</span>
+                <span className={styles["k"]}>{"학부모 리포트"}</span>
+                <span className={styles["v"]}>{"학습 과정과 변화를 안내"}</span>
+                <span className={styles["s"]}>{"수업 참여와 학습 내용을 공유"}</span>
               </div>
               {"\n    "}
             </div>
@@ -236,7 +236,7 @@ export default function Page() {
             {"\n    "}
             <p className={styles["caption"]}>
               {
-                '쓰기는 2교시에 둡니다. 2교시 안에서 쓰기 시간을 몇 분 둘지는 확정 전이라, 상담에서는 "쓰기 시간을 충분히 확보하고 개별 첨삭합니다"까지만 말합니다.'
+                '쓰기는 2교시에 둡니다. 2교시 안에서 쓰기 시간을 몇 분 둘지는 확정 전이라, 상담에서는 "학습 과정과 변화는 학부모 리포트로 안내드립니다"라고 말합니다.'
               }
             </p>
             {"\n  "}
@@ -932,7 +932,7 @@ export default function Page() {
               {"\n      "}
               <li>
                 <span>
-                  {"학부모에게 첨삭 결과와 학습 리포트를 보내는 주기"}
+                  {"학부모 리포트 제공 주기"}
                 </span>
               </li>
               {"\n      "}
