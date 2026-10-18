@@ -175,7 +175,7 @@ export default function Page() {
                 </dd>
                 {"\n        "}
                 <dt>{"정원"}</dt>
-                <dd>{"한 반 10~15명 내외"}</dd>
+                <dd>{"10명 이내"}</dd>
                 {"\n        "}
                 <dt>{"반"}</dt>
                 <dd>{"학년별로 나눈 뒤 독해반, 논리반"}</dd>
@@ -187,10 +187,10 @@ export default function Page() {
                   }
                 </dd>
                 {"\n        "}
-                <dt>{"FLARE"}</dt>
+                <dt>{"교재"}</dt>
                 <dd>
                   {
-                    "자체 개발 독서 교재. 학기 중 2주에 1권 (방학 1주에 1권 예정)"
+                    "약 1년간의 연구·개발을 통해 완성한 100% 자체 제작 교재. 수업에 필요한 교재는 입반 후 배부"
                   }
                 </dd>
                 {"\n        "}
@@ -200,10 +200,11 @@ export default function Page() {
                 <dt>{"첨삭"}</dt>
                 <dd>{"학생별 개별 첨삭"}</dd>
                 {"\n        "}
-                <dt>{"교습비"}</dt>
-                <dd>
-                  <span className={styles["ph"]}>{"교습비"}</span>
-                </dd>
+                <dt>{"수강료"}</dt>
+                <dd>{"4회 수업 기준 270,000원 (교재비 별도)"}</dd>
+                {"\n        "}
+                <dt>{"교재비"}</dt>
+                <dd>{"금액 및 자세한 사항은 입반 시 안내"}</dd>
                 {"\n        "}
                 <dt>{"시간표"}</dt>
                 <dd>
@@ -390,10 +391,8 @@ export default function Page() {
                   <span className={styles["who"]}>{"실장"}</span>
                   <p>
                     {
-                      '"수업은 한 번에 3시간, 50분씩 3교시로 진행하고, 교습비는 '
+                      '"수업은 한 번에 3시간, 50분씩 3교시로 진행하고, 수강료는 4회 기준 270,000원이에요. 교재비는 별도이며 자세한 사항은 입반 시 안내드려요. '
                     }
-                    <span className={styles["ph"]}>{"교습비"}</span>
-                    {"예요. "}
                     <span className={styles["ph"]}>{"학년"}</span>
                     {" 수업은 "}
                     <span className={styles["ph"]}>{"요일과 시간"}</span>
@@ -625,7 +624,7 @@ export default function Page() {
                   <span className={styles["who"]}>{"포인트"}</span>
                   <p>
                     {
-                      "한 반 10~15명 내외라 개인 발표, 모둠 활동, 전체 활동이 한 수업 안에서 오가고, 쓴 글은 학생마다 개별 첨삭한다는 점을 함께 말합니다."
+                      "정원은 10명 이내이며, 개인 발표, 모둠 활동, 전체 활동이 한 수업 안에서 오가고 쓴 글은 학생마다 개별 첨삭한다는 점을 함께 말합니다."
                     }
                   </p>
                 </div>
@@ -719,14 +718,12 @@ export default function Page() {
               {"\n      "}
               <li>
                 {"\n        "}
-                <h3>{"교습비와 규정 안내"}</h3>
+                <h3>{"수강료와 교재 안내"}</h3>
                 {"\n        "}
                 <div className={styles["line"] + " " + styles["say"]}>
                   <span className={styles["who"]}>{"실장"}</span>
                   <p>
-                    {'"교습비는 '}
-                    <span className={styles["ph"]}>{"교습비"}</span>
-                    {"이고, 결제는 "}
+                    {'"수강료는 4회 수업 기준 270,000원이며, 교재비는 별도입니다. 교재비의 금액과 자세한 사항은 입반 시 안내드립니다. 문해와 사유의 모든 교재는 약 1년간의 연구·개발을 통해 완성한 100% 자체 제작 교재이며, 수업에 필요한 교재는 입반 후 배부됩니다. 결제는 '}
                     <span className={styles["ph"]}>{"결제 방식"}</span>
                     {
                       '으로 하시면 돼요. 환불 규정은 이 안내문에 정리되어 있어요."'
@@ -738,7 +735,7 @@ export default function Page() {
                   <span className={styles["who"]}>{"포인트"}</span>
                   <p>
                     {
-                      "운영 정책 1장(교습비, 환불, 할인, 출결과 보강)을 보여 주며 설명합니다."
+                      "운영 정책 1장(수강료, 환불, 할인, 출결과 보강)을 보여 주며 설명합니다."
                     }
                   </p>
                 </div>
@@ -849,11 +846,7 @@ export default function Page() {
                   {"\n          "}
                   <div className={styles["line"] + " " + styles["say"]}>
                     <span className={styles["who"]}>{"실장"}</span>
-                    <p>
-                      {
-                        '"10~15명 내외예요. 개인 발표, 모둠 활동, 전체 활동이 한 수업 안에서 고루 이루어지는 규모예요."'
-                      }
-                    </p>
+                    <p>{'"정원은 10명 이내예요. 개인 발표, 모둠 활동, 전체 활동을 고루 진행합니다."'}</p>
                   </div>
                   {"\n        "}
                 </div>
@@ -1450,6 +1443,22 @@ export default function Page() {
               <article className={styles["msg"]}>
                 {"\n        "}
                 <div className={styles["msg-head"]}>
+                  <h3>{"수강료·교재 안내 문자"}</h3>
+                  <span className={styles["when"]}>{"문의 응대 시"}</span>
+                  <CopyButton className={styles.copy} />
+                </div>
+                {"\n        "}
+                <p className={styles["msg-text"]}>
+                  {
+                    "안녕하세요, 문해와 사유 초등관입니다.\n\n수강료는 4회 수업 기준 270,000원이며, 교재비는 별도입니다. 교재비에 대한 자세한 사항은 입반 시 안내드립니다.\n\n문해와 사유는 약 1년간의 연구·개발을 통해 완성한 100% 자체 제작 교재를 사용하며, 수업에 필요한 교재는 입반 후 배부됩니다."
+                  }
+                </p>
+                {"\n      "}
+              </article>
+              {"\n      "}
+              <article className={styles["msg"]}>
+                {"\n        "}
+                <div className={styles["msg-head"]}>
                   <h3>{"상담 후 2일 문자"}</h3>
                   <span className={styles["when"]}>{"결과 상담 2일 뒤"}</span>
                   <CopyButton className={styles.copy} />
@@ -1607,7 +1616,7 @@ export default function Page() {
         {"\n"}
         <footer className={styles["foot"]}>
           {
-            "PROJECT COSMO 커리큘럼(10월 17일 기준)을 바탕으로 썼습니다. 노란 칸은 교습비, 시간표, 개강일, 할인 정책, 체험수업, 숙제 분량이 정해진 뒤 채우고, 원장, 강사와 상담 리허설을 거쳐 확정합니다."
+            "PROJECT COSMO 커리큘럼(10월 17일 기준)을 바탕으로 썼습니다. 노란 칸은 시간표, 개강일, 할인 정책, 체험수업, 숙제 분량이 정해진 뒤 채우고, 원장, 강사와 상담 리허설을 거쳐 확정합니다."
           }
         </footer>
         {"\n"}

@@ -133,14 +133,20 @@ export default function Page() {
               {"\n      "}
               <div className={styles["fact"]}>
                 <span className={styles["k"]}>{"정원"}</span>
-                <span className={styles["v"]}>
-                  {"한 반 "}
-                  <span className={styles["n"]}>{"10~15"}</span>
-                  {"명 내외"}
-                </span>
-                <span className={styles["s"]}>
-                  {"개인 발표, 모둠, 전체 활동"}
-                </span>
+                <span className={styles["v"]}>{"10명 이내"}</span>
+                <span className={styles["s"]}>{"개인 발표, 모둠, 전체 활동"}</span>
+              </div>
+              {"\n      "}
+              <div className={styles["fact"]}>
+                <span className={styles["k"]}>{"수강료"}</span>
+                <span className={styles["v"]}>{"4회 수업 기준 270,000원"}</span>
+                <span className={styles["s"]}>{"교재비 별도 · 자세한 사항은 입반 시 안내"}</span>
+              </div>
+              {"\n      "}
+              <div className={styles["fact"]}>
+                <span className={styles["k"]}>{"교재"}</span>
+                <span className={styles["v"]}>{"100% 자체 제작 교재"}</span>
+                <span className={styles["s"]}>{"약 1년간 연구·개발 · 입반 후 배부"}</span>
               </div>
               {"\n      "}
               <div className={styles["fact"]}>
@@ -935,7 +941,7 @@ export default function Page() {
               </li>
               {"\n      "}
               <li>
-                <span>{"교습비, 시간표, 개강일 (운영팀)"}</span>
+                <span>{"시간표, 개강일 (운영팀)"}</span>
               </li>
               {"\n    "}
             </ul>
